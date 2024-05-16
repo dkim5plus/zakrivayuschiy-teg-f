@@ -17,4 +17,94 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--xl-weight);
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+.header {
+
+}
+
+.theme-menu {
+
+}
+
+.header__theme-menu {
+
+}
+
+.theme-menu__list {
+
+}
+
+.theme-menu__item {
+
+}
+
+.theme-menu__button {
+
+}
+
+.main {
+
+}
+
+.card {
+
+}
+
+.card-title {
+
+}
+
+.card_image-cont {
+
+}
+
+.card-image {
+
+}
+
+.card_image-label {
+
+}
+
+.card_content-box {
+
+}
+
+.card_text-cont {
+
+}
+
+.card_text {
+
+}
+
+.card_button-cont {
+
+}
+
+.card_icon-button {
+
+}
+
+.button {
+
+}
+
+.card_like-button {
+
+}
+
+.button_text {
+
+}
+
+
+
