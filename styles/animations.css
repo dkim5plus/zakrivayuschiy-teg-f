@@ -13,7 +13,7 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-@keyframes arrow {
+@keyframes arrow_movement {
     from {
       transform: translateX(0px);
     }
@@ -22,7 +22,7 @@
     }
 }
 
-@keyframes sparks {
+@keyframes sparks_appearing {
     from {
       opacity: 0;
     }
@@ -36,12 +36,8 @@
     opacity: 0;
 }
   
-.sparks .like-icon.is-liked {
-    transform-origin: center;
-    animation: sparks 0.3s ease-in 0.3s alternate 2;
-}
 
-@keyframes heart {
+@keyframes heart_scaling {
     from {
       transform: scale(1);
     }
@@ -55,7 +51,7 @@
     transform-origin: center;
   }
   
-  /*hover*/
+/*hover*/
 .like-icon .core {
     transition: fill 0.3s linear;
     fill: var(--bg-color);
@@ -72,52 +68,44 @@
   
 .like-icon:hover .main-body {
     fill: var(--accent-color);
-    transition: fill 0.3s linear 0.05s;
+    transition: fill 0.3s linear 0.03s;
 }
   
   
 /*click*/
+
 .like-icon.is-liked .core {
     transition: fill 0.3s linear;
     fill: var(--like-color);
-}
+  }
   
-.like-icon.is-liked .main-body {
+  .like-icon.is-liked .main-body {
     transition: fill 0.3s linear 0.05s;
     fill: var(--like-color);
-}
+  }
   
-.like-icon.is-liked .heart {
+  .like-icon.is-liked .contour {
     transition: fill 0.3s linear 0.06s;
     fill: var(--like-color);
-}
+  }
   
-.like-icon.is-liked .contour {
-    animation: heart 0.3s ease-in 0.1s 1 alternate;
-    fill: var(--like-color);
-    transform-origin: center;
-}
+  .like-icon.is-liked .heart {
+    animation: heart_scaling 0.3s ease-in 0.1s 1 alternate;
+  }
   
-.like-icon.is-liked .sparks {
-    animation: sparks 0.3s ease-in 0.3s 1 alternate;
-}
+  .like-icon.is-liked .sparks {
+    animation: sparks_appearing 0.3s ease-in 0.3s 1 alternate;
+  }
   
-.like-icon .contour {
+  .like-icon .contour {
     fill: var(--accent-color);
     transition: fill 0.1s linear;
-}
+  }
+  
 
 /*active*/
-.like-icon .core {
-    transition: fill 0.3s linear;
-    fill: var(--bg-color);
-}
       
-.like-icon .main-body {
-    transition: fill 0.3s linear 0.05s;
-    fill: var(--bg-color);
-}
-      
+
 .like-icon:active .core {
     fill: var(--like-color);
 }
