@@ -244,10 +244,6 @@
   block-size: 36px;
 }
 
-.sparks {
-  opacity: 0;
-}
-
 .card__like-button {
   min-inline-size: 127px; 
   min-block-size: 34px;
