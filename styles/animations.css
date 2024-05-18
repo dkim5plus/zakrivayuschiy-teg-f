@@ -12,3 +12,117 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes arrow {
+    from {
+      transform: translateX(0px);
+    }
+    to {
+      transform: translateX(4px);
+    }
+}
+
+@keyframes sparks {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+}
+
+.sparks {
+    opacity: 0;
+}
+  
+.sparks .like-icon.is-liked {
+    transform-origin: center;
+    animation: sparks 0.3s ease-in 0.3s alternate 2;
+}
+
+@keyframes heart {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.5);
+    }
+}
+
+.like-icon .heart {
+    transform-origin: center;
+  }
+  
+  /*hover*/
+.like-icon .core {
+    transition: fill 0.3s linear;
+    fill: var(--bg-color);
+}
+  
+.like-icon .main-body {
+    transition: fill 0.3s linear 0.05s;
+    fill: var(--bg-color);
+}
+  
+.like-icon:hover .core {
+    fill: var(--accent-color);
+}
+  
+.like-icon:hover .main-body {
+    fill: var(--accent-color);
+    transition: fill 0.3s linear 0.05s;
+}
+  
+  
+/*click*/
+.like-icon.is-liked .core {
+    transition: fill 0.3s linear;
+    fill: var(--like-color);
+}
+  
+.like-icon.is-liked .main-body {
+    transition: fill 0.3s linear 0.05s;
+    fill: var(--like-color);
+}
+  
+.like-icon.is-liked .heart {
+    transition: fill 0.3s linear 0.06s;
+    fill: var(--like-color);
+}
+  
+.like-icon.is-liked .contour {
+    animation: heart 0.3s ease-in 0.1s 1 alternate;
+    fill: var(--like-color);
+    transform-origin: center;
+}
+  
+.like-icon.is-liked .sparks {
+    animation: sparks 0.3s ease-in 0.3s 1 alternate;
+}
+  
+.like-icon .contour {
+    fill: var(--accent-color);
+    transition: fill 0.1s linear;
+}
+
+/*active*/
+.like-icon .core {
+    transition: fill 0.3s linear;
+    fill: var(--bg-color);
+}
+      
+.like-icon .main-body {
+    transition: fill 0.3s linear 0.05s;
+    fill: var(--bg-color);
+}
+      
+.like-icon:active .core {
+    fill: var(--like-color);
+}
+      
+.like-icon:active .main-body {
+    fill: var(--like-color);
+    transition: fill 0.3s linear 0.05s;
+}
