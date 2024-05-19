@@ -76,7 +76,7 @@
 .theme-menu__button:hover {
   cursor: pointer;
   transition: color 0.3s ease;
-  cursor: pointer;
+  opacity: 0.6;
 }
 
 .theme-menu__button::after {
@@ -255,7 +255,6 @@
 }
 
 .card__like-button:focus-visible {
-  outline: none;
   transition: box-shadow 0.3s ease;
 }
 
@@ -313,8 +312,8 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 15px 20px;
-  margin-block: 54px 100px;
+  padding: 15px 21px;
+  margin-block: 52px 100px;
   background-color: var(--bg-color);
   outline: 2px solid var(--accent-color);
   cursor: pointer;
@@ -323,8 +322,7 @@
 .button__floppy {
   max-width: 28px;
   height: auto;
-  color: var(--accent-color);
-  mix-blend-mode: difference;
+  fill: var(--accent-color);
 }
 
 
@@ -356,7 +354,7 @@
 .dialog__floppy {
   min-inline-size: 39px;
   min-block-size: 39px;
-  color: var(--accent-color)
+  fill: var(--accent-color)
 }
 
 
@@ -379,7 +377,12 @@
   padding: 9px 17px;
   color: var(--accent-color);
   background-color: transparent;
-  outline: 2px solid var(--accent-color)
+  outline: 2px solid var(--accent-color);
+  text-transform: uppercase;
+}
+
+.dialog-button_text {
+  text-transform: uppercase;
 }
 
 
@@ -410,7 +413,8 @@
 
   .dialog-button {
     flex-direction: row;
-    flex-direction: 15px 19px;
+    margin-block: 50px 105px;
+    padding: 15px 19px;
   }
 
   .button__floppy {
