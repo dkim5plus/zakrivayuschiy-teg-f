@@ -214,11 +214,11 @@
 
 .card__button-cont {
   display: flex;
-  gap: 3px;
   justify-content: end;
+  gap: 3px;
   align-items: center;
-  margin-block-end: 25px;
-  margin-inline-end: 25px;
+  margin-block: 2px 25px;
+  margin-inline-end: 27px;
 }
 
 .card__icon-button {
@@ -248,10 +248,6 @@
   min-inline-size: 127px; 
   min-block-size: 34px;
   padding: 9px 17px;
-  border: none;
-  outline: 2px solid var(--accent-color);
-  background-color: transparent;
-  position: relative;
 }
 
 .card__like-button:focus-visible {
@@ -270,8 +266,15 @@
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   position: relative;
+  outline: 2px solid var(--accent-color);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .button::before {
@@ -307,22 +310,18 @@
 }
 
 .dialog-button {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
   padding: 15px 21px;
   margin-block: 52px 100px;
   background-color: var(--bg-color);
-  outline: 2px solid var(--accent-color);
-  cursor: pointer;
-}
+ }
 
 .button__floppy {
   max-width: 28px;
   height: auto;
-  fill: var(--accent-color);
+  color: var(--button-color);
+  mix-blend-mode: difference;
 }
 
 
@@ -355,7 +354,7 @@
 .dialog__floppy {
   min-inline-size: 39px;
   min-block-size: 39px;
-  fill: var(--accent-color)
+  fill: var(--button-color)
 }
 
 
@@ -368,21 +367,14 @@
 }
 
 .window-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   min-inline-size: 257px;
   max-inline-size: 293px;
   max-block-size: 38px;
   padding: 9px 17px;
-  color: var(--accent-color);
-  background-color: transparent;
-  outline: 2px solid var(--accent-color);
-  text-transform: uppercase;
 }
 
-.dialog-button_text {
+.dialog-button__text {
   text-transform: uppercase;
 }
 
